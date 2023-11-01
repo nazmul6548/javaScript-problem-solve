@@ -55,6 +55,7 @@ for (let i = 0;i<numbers.length; i++) {
 
 
 // ৯. সিম্পল একটা ফাংশন লিখতে হবে। যেটার নাম হবে feetToInch এবং এই ফাংশন ইনপুট হিসেবে নিবে feet আর রিটার্ন করবে inch । অর্থাৎ এই ফাংশনকে কোন একটা ফিট বলে দিলে সে রিটার্ন হিসেবে বলে দিবে কত ইঞ্চি হয়।
+// _____ans____//
 function feetToInch(feet) {
   var calculate = feet*12;
   return calculate;
@@ -62,3 +63,13 @@ function feetToInch(feet) {
 var num = 5;
 var inch =feetToInch(num);
 console.log(inch);
+
+// ১০. একদম ফাংশন এর নাম হুবহু centimeterToMeter নাম দিয়ে একটা ফাংশন লিখবে। এই ফাংশনে ইনপুট হিসাবে কেউ সেন্টিমিটার দিবে আর সেই সেন্টিমিটার কে মিটার এ কনভার্ট করে রেজাল্ট রিটার্ন করবে। 
+// _____ans____//
+function centimeterToMeter(cm) {
+var calculate=cm *0.01;
+return calculate;
+}
+var num =  200;
+var meter =centimeterToMeter(num);
+console.log(meter);
