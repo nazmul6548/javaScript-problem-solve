@@ -42,34 +42,52 @@ while (x <= 17) {
   x++;
 }
 
-
 // ৮. তোমাকে যদি বলা হয়। একটা array এর মধ্যে ৮০ এর চাইতে বড় সংখ্যা থাকলে সেগুলাকে console log করে দেখাতে সেটা কি তুমি পারবে? তাহলে তুমি সেই কোড করে ফেলো ।
 // _____ans____//
 const numbers = [11, 12, 13, 80, 88, 100, 111, 112, 121, 132, 434];
-for (let i = 0;i<numbers.length; i++) {
-  if(numbers[i]>=80) {
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] >= 80) {
     console.log(numbers[i]);
   }
 }
 
-
-
 // ৯. সিম্পল একটা ফাংশন লিখতে হবে। যেটার নাম হবে feetToInch এবং এই ফাংশন ইনপুট হিসেবে নিবে feet আর রিটার্ন করবে inch । অর্থাৎ এই ফাংশনকে কোন একটা ফিট বলে দিলে সে রিটার্ন হিসেবে বলে দিবে কত ইঞ্চি হয়।
 // _____ans____//
 function feetToInch(feet) {
-  var calculate = feet*12;
+  var calculate = feet * 12;
   return calculate;
 }
 var num = 5;
-var inch =feetToInch(num);
+var inch = feetToInch(num);
 console.log(inch);
 
-// ১০. একদম ফাংশন এর নাম হুবহু centimeterToMeter নাম দিয়ে একটা ফাংশন লিখবে। এই ফাংশনে ইনপুট হিসাবে কেউ সেন্টিমিটার দিবে আর সেই সেন্টিমিটার কে মিটার এ কনভার্ট করে রেজাল্ট রিটার্ন করবে। 
+// ১০. একদম ফাংশন এর নাম হুবহু centimeterToMeter নাম দিয়ে একটা ফাংশন লিখবে। এই ফাংশনে ইনপুট হিসাবে কেউ সেন্টিমিটার দিবে আর সেই সেন্টিমিটার কে মিটার এ কনভার্ট করে রেজাল্ট রিটার্ন করবে।
 // _____ans____//
 function centimeterToMeter(cm) {
-var calculate=cm *0.01;
-return calculate;
+  var calculate = cm * 0.01;
+  return calculate;
 }
-var num =  200;
-var meter =centimeterToMeter(num);
+var num = 200;
+var meter = centimeterToMeter(num);
 console.log(meter);
+
+// ১১. একটা ফাংশন লিখবে যেই ফাংশনের নাম হবে paperRequirements এই ফাংশনের প্যারামিটার হিসেবে তিনটা প্যারামিটার হবে। প্রথম প্যারামিটার হবে তুমি প্রথম বই কত কপি ছাপাতে চাও। সেকেন্ড প্যারামিটার হবে তুমি সেকেন্ড বই কত কপি ছাপাতে চাও। আর থার্ড প্যারামিটার হবে তুমি থার্ড বই কত কপি ছাপাতে চাও। অর্থাৎ কোন বই এর কত কপি ছাপানো হবে সেটাই প্যারামিটার হিসেবে নিবে।
+
+// এইবার ভালো করে খেয়াল করো।
+// প্রথম বই ছাপানোর জন্য পৃষ্ঠা লাগবে ১০০ টা
+// সেকেন্ড বই ছাপানোর জন্য পৃষ্ঠা লাগবে ২০০ টা
+// তৃতীয় বই ছাপানোর জন্য পৃষ্ঠা লাগবে ৩০০ টা
+// এখন তোমার কাজ হচ্ছে paperRequirements নামক ফাংশন লিখে ফেলা যাতে। সেই ফাংশনকে কল করে কোন বই এর কত কপি লাগবে বলে দিবে প্যারামিটার হিসেবে। আর ফাংশন হিসাব করে বলে দিবে তোমার সর্বমোট কতপৃষ্ঠা কাগজ লাগবে।  উত্তর হিসেবে সংখ্যা রিটার্ন করবে।
+// _____ans____//
+function paperRequirements(book1, book2, book3) {
+  var calculate1 = book1 * 100;
+  var calculate2 = book2 * 200;
+  var calculate3 = book3 * 300;
+  var need = calculate1 + calculate2 + calculate3;
+  return need;
+}
+var book1 = 2;
+var book2 = 4;
+var book3 = 6;
+var results = paperRequirements(book1, book2, book3);
+console.log(results);
