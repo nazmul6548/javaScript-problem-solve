@@ -36,8 +36,29 @@ console.log(areaResult);
 // _____ans____
 let x = 7;
 while (x <= 17) {
-  if (x % 2 !== 0 && x>=7) {
-    console.log(x)
-}
+  if (x % 2 !== 0 && x >= 7) {
+    console.log(x);
+  }
   x++;
 }
+
+
+// ৮. তোমাকে যদি বলা হয়। একটা array এর মধ্যে ৮০ এর চাইতে বড় সংখ্যা থাকলে সেগুলাকে console log করে দেখাতে সেটা কি তুমি পারবে? তাহলে তুমি সেই কোড করে ফেলো ।
+// _____ans____//
+const numbers = [11, 12, 13, 80, 88, 100, 111, 112, 121, 132, 434];
+for (let i = 0;i<numbers.length; i++) {
+  if(numbers[i]>=80) {
+    console.log(numbers[i]);
+  }
+}
+
+
+
+// ৯. সিম্পল একটা ফাংশন লিখতে হবে। যেটার নাম হবে feetToInch এবং এই ফাংশন ইনপুট হিসেবে নিবে feet আর রিটার্ন করবে inch । অর্থাৎ এই ফাংশনকে কোন একটা ফিট বলে দিলে সে রিটার্ন হিসেবে বলে দিবে কত ইঞ্চি হয়।
+function feetToInch(feet) {
+  var calculate = feet*12;
+  return calculate;
+}
+var num = 5;
+var inch =feetToInch(num);
+console.log(inch);
