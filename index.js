@@ -1,11 +1,11 @@
 // ১. একটা কোড লিখো। যেটা দিয়ে কোন একটা array এর মধ্যে সবচেয়ে ছোট সংখ্যা বের করে দিতে পারবে
-// _____ans____
+// _____ans____//
 var randomNum = [2, 3, 4, 7, 59, 98, 53, 87, -3];
 const result = Math.min(...randomNum);
 console.log(result);
 
 // ২. একটা কোড লিখো যেটা দিয়ে তিনটা সংখ্যার মধ্যে সবচেয়ে ছোট সংখ্যা বের করে দিবে।
-// _____ans____
+// _____ans____//
 var num1 = -101;
 var num2 = 12;
 var num3 = 33;
@@ -19,7 +19,7 @@ if (results < num2) {
 }
 
 // ৪. একটা ফাংশন লিখো। সেটার মধ্যে তিনটা প্যারামিটার নিবে। এই তিনটা প্যারামিটার হবে কোন একটা ত্রিভুজের তিনটা বাহু এর দৈর্য্য। এখন তোমার কাজ হচ্ছে ফাংশনের ভিতরে কিছু হিসাব নিকাশ করে ত্রিভুজের area (আয়তন) বের করা। কোন একটা ত্রিভুজের তিনটা বাহুর দৈর্য্য দেয়া থাকলে সেটা থেকে কিভাবে আয়তন বের করতে হয় সেই ফর্মুলা গুগল থেকে খুঁজে বের করো।
-
+// _____ans____//
 function triangle(a, b, c) {
   // we are know that//
   var s = (a + b + c) / 2;
@@ -33,7 +33,7 @@ var areaResult = triangle(a, b, c);
 console.log(areaResult);
 
 //   ৬. তোমাকে যদি বলে একটা while লুপ দিয়ে ৭ থেকে ১৯ পর্যন্ত যতগুলা বিজোড় সংখ্যা আছে সেগুলা দেখাতে। তুমি কি সেটা দেখাতে পারবে? পারলে সেই কোড লিখে ফেলো।
-// _____ans____
+// _____ans____//
 let x = 7;
 while (x <= 17) {
   if (x % 2 !== 0 && x >= 7) {
@@ -106,3 +106,21 @@ function pNnumber(numbers) {
 const input = [1, 2, 4, 5, 66, -3, -6, -8, 65];
 var returnNum = pNnumber(input);
 console.log(returnNum);
+
+// ১৪. [ ফাংশন নেম দিতে হবে pandaCost]: তিনটা প্যারামিটার লাগবে। ভিডিও ভালো করে দেখবে।
+
+// ১ টি সিঙ্গারা এর দাম – ৭ টাকা (1st parameter)
+// ১ টি সমুচা এর দাম – ১০ টাকা (2nd parameter)
+// ১ টি জিলাপি এর দাম – ১৫ টাকা (3rd parameter)
+
+// এখন সে যদি বিভিন্ন সংখ্যার সিঙ্গারা, সমুচা, আর জিলাপি এর অর্ডার দেয় তাহলে টোটাল কত টাকা খরচ হবে হলো সেই সংখ্যা রিটার্ন করতে হবে।
+// _____ans____//
+function pandaCost(singgara, chomuca, jilapi) {
+  var calculate = singgara * 7 + chomuca * 10 + jilapi * 15;
+  return calculate;
+}
+var singgara = 2;
+var chomuca = 2;
+var jilapi = 5;
+var totalCost = pandaCost(singgara, chomuca, jilapi);
+console.log(totalCost);
