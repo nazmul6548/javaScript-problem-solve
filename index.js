@@ -32,6 +32,19 @@ var c = 15;
 var areaResult = triangle(a, b, c);
 console.log(areaResult);
 
+// ৫. কোন একটা সংখ্যা প্রাইম সংখ্যা (prime number) কিনা। সেটা চেক করার একটা ফাংশন লিখো।
+// _____ans____//
+function primeNumber(odd) {
+  if (typeof odd === "number" && odd % 2 !== 0) {
+    return "is prime number";
+  } else {
+    return "is not prime number";
+  }
+}
+var odd = 8;
+var ress = primeNumber(odd);
+console.log(ress);
+
 //   ৬. তোমাকে যদি বলে একটা while লুপ দিয়ে ৭ থেকে ১৯ পর্যন্ত যতগুলা বিজোড় সংখ্যা আছে সেগুলা দেখাতে। তুমি কি সেটা দেখাতে পারবে? পারলে সেই কোড লিখে ফেলো।
 // _____ans____//
 let x = 7;
@@ -44,7 +57,7 @@ while (x <= 17) {
 
 // ৮. তোমাকে যদি বলা হয়। একটা array এর মধ্যে ৮০ এর চাইতে বড় সংখ্যা থাকলে সেগুলাকে console log করে দেখাতে সেটা কি তুমি পারবে? তাহলে তুমি সেই কোড করে ফেলো ।
 // _____ans____//
-const numbers = [11, 12, 13, 80, 88, 100, 111, 112, 121, 172, 434,77,999];
+const numbers = [11, 12, 13, 80, 88, 100, 111, 112, 121, 172, 434, 77, 999];
 for (let i = 0; i < numbers.length; i++) {
   if (numbers[i] >= 80) {
     console.log(numbers[i]);
@@ -159,14 +172,19 @@ console.log(totalCost);
 // এখন আমি একটা প্যারামিটার দিবো। সেটা যেকোন সংখ্যা হতে পারে। সেই সংখ্যা অনুসারে তুমি ফাংশন থেকে রিটার্ন দিবে কতটাকা পিকনিক এর বাজেট হতে হবে। ইনপুট প্যারামিটার সংখ্যাটা ১০০ এর কম হতে পারে। ১০০ থেকে ২০০ এর মধ্যে হতে পারে। আবার ২০০ এর বেশিও হতে পারে। তাই সব কেইস ভালো করে টেস্ট করে নিবে।
 // _____ans____//
 function picnicBudget(figure) {
-  if (figure <= 100) {
-    return figure * 5000;
-  } else if (figure > 100 && figure <= 200) {
-    return 100 * 5000 + (figure - 100) * 4000;
-  } else if (figure > 200) {
-    return 100 * 5000 + 100 * 4000 + (figure - 200) * 3000;
+  if (typeof figure === "number" && 1 <= figure) {
+    if (figure <= 100) {
+      return figure * 5000;
+    } else if (figure > 100 && figure <= 200) {
+      return 100 * 5000 + (figure - 100) * 4000;
+    } else if (figure > 200) {
+      return 100 * 5000 + 100 * 4000 + (figure - 200) * 3000;
+    }
+  } else {
+    return "invalid";
   }
 }
-var num = 203;
+
+var num = 80;
 var totalBudget = picnicBudget(num);
 console.log(totalBudget);
